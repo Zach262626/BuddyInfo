@@ -22,4 +22,7 @@ public class AdressBook {
         }
         return false;
     }
+    public static void main(String[] args) {
+        System.out.println("Address Book");
+    }
 }
