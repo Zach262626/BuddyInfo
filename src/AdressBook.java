@@ -6,23 +6,21 @@ public class AdressBook {
     public AdressBook() {
         buddies = new ArrayList<BuddyInfo>();
         this.buddies.add(new BuddyInfo("Joe", "50 Blue ave, Ottawa, ON", 5067891111L));
-        this.buddies.add(new BuddyInfo("Zach", "765 Orange ave, Ottawa, ON", 5067891111L));
-        this.buddies.add(new BuddyInfo("Tom", "2 Pink ave, Ottawa, ON", 5067891111L));
-        this.buddies.add(new BuddyInfo("Amelia", "345 Black ave, Ottawa, ON", 5067891111L));
+        this.buddies.add(new BuddyInfo("Zach", "765 Orange ave, Ottawa, ON", 5067891112L));
+        this.buddies.add(new BuddyInfo("Tom", "2 Pink ave, Ottawa, ON", 5067891113L));
+        this.buddies.add(new BuddyInfo("Amelia", "345 Black ave, Ottawa, ON", 5067891114L));
     }
 
-    public boolean addBuddy(String name, String address, long phone) {
-        return this.buddies.add(new BuddyInfo(name, address, phone));
+    public boolean addBuddy(BuddyInfo buddy) {
+        return this.buddies.add(buddy);
     }
-    public boolean removeBuddy(String name) {
-        for (BuddyInfo buddy : this.buddies) {
-            if (buddy.getName().equals(name)) {
-                return this.buddies.remove(buddy);
-            }
-        }
-        return false;
+    public boolean removeBuddy(BuddyInfo buddy) {
+        return this.buddies.remove(buddy);
     }
     public static void main(String[] args) {
-        System.out.println("Address Book");
+        BuddyInfo buddy = new BuddyInfo("Tommy", "Carleton", 5067891115L);
+        AdressBook adressBook = new AdressBook();
+        adressBook.addBuddy(buddy);
+        adressBook.removeBuddy(buddy);
     }
 }
