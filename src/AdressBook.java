@@ -6,7 +6,7 @@ public class AdressBook {
     public AdressBook() {
         buddies = new ArrayList<BuddyInfo>();
         this.buddies.add(new BuddyInfo("Joe", "50 Blue ave, Ottawa, ON", 5067891111L));
-        this.buddies.add(new BuddyInfo("Zach", "765 Orange ave, Ottawa, ON", 5067891112L));
+        this.buddies.add(new BuddyInfo("Zachddd", "765 Orange ave, Ottawa, ON", 5067891112L));
         this.buddies.add(new BuddyInfo("Tom", "2 Pink ave, Ottawa, ON", 5067891113L));
         this.buddies.add(new BuddyInfo("Amelia", "345 Black ave, Ottawa, ON", 5067891114L));
     }
