@@ -12,15 +12,18 @@ public class AdressBook {
     }
 
     public boolean addBuddy(BuddyInfo buddy) {
-        return this.buddies.add(buddy);
+        return buddies.add(buddy);
     }
-    public boolean removeBuddy(BuddyInfo buddy) {
-        return this.buddies.remove(buddy);
+    public BuddyInfo removeBuddy(int index) {
+        if (index >= 0 && index < this.buddies.size()) {
+            return buddies.remove(index);
+        }
+        return null;
     }
     public static void main(String[] args) {
         BuddyInfo buddy = new BuddyInfo("Tommy", "Carleton", 5067891115L);
         AdressBook adressBook = new AdressBook();
         adressBook.addBuddy(buddy);
-        adressBook.removeBuddy(buddy);
+        adressBook.removeBuddy(4);//tommy
     }
 }
